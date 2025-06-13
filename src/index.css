@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-sizing;
+}
+.background {
+  background-image: url("./assets/images/background.webp");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination li {
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.pagination li a {
+  font-size: 18px;
+  font-weight: 600;
+  width: 45px;
+  color: rgba(0, 0, 0, 0.793);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.pagination .active {
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .pagination {
+    gap: 10px;
+  }
+
+  .pagination li a {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+}
