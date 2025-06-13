@@ -6,7 +6,7 @@ function GlobalSearch() {
       <input
         className="h-full w-full outline-none px-3 bg-transparent border-solid border-[2px] rounded-[6px]"
         type="text"
-        placeholder="Search ... "
+        placeholder="Qidiruv ... "
       />
       <button className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer">
         <FaSearch />

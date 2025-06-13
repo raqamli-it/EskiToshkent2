@@ -1,19 +1,29 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { FaArrowLeft, FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
+import { Link, useSearchParams } from "react-router-dom";
+import ReactPaginate from "react-paginate";
 
 function Library() {
   const [data, setData] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const currentPage = Number(searchParams.get("page")) || 1;
 
-  const getData = async () => {
-    const respons = await axios.get(`kutubxona/`);
+  const getData = async (Page = 1) => {
+    const respons = await axios.get(`kutubxona/?page=${Page}`);
+    setPageCount(Math.ceil(respons?.data?.count / 12));
     setData(respons?.data);
   };
 
+  const handlePageClick = (event) => {
+    const selectedPage = event.selected + 1;
+    setSearchParams({ page: selectedPage }); // URL ga saqlash
+  };
+
   useEffect(() => {
-    getData();
-  }, []);
+    getData(currentPage);
+  }, [currentPage]);
   console.log(data, "xxxx");
 
   return (
@@ -42,7 +52,7 @@ function Library() {
                   className="h-full w-full transition duration-500 ease-in-out group-hover:scale-110"
                 />
               </Link>
-              <div className="leading-[28px] duration-300 group-hover:duration-300 bg-[#E5E5E5] group-hover:text-black w-full h-[85px] absolute bottom-0 justify-center flex items-center flex-col text-[18px] px-2 line-clamp-1 sm:h-[75px]">
+              <div className="leading-[28px] duration-300 group-hover:duration-300 bg-[#E5E5E5] group-hover:text-black w-full h-[85px] absolute bottom-0 justify-center flex items-center flex-col text-[18px] px-5 line-clamp-1 sm:h-[75px]">
                 <Link to="/" className="font-semibold h-[28px] line-clamp-1">
                   {value?.title_uz}
                 </Link>
@@ -61,6 +71,19 @@ function Library() {
             </div>
           ))}
         </div>
+
+        <ReactPaginate
+          previousLabel={<FaArrowLeft />}
+          nextLabel={<FaArrowRight />}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={2}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+          forcePage={currentPage - 1}
+        />
       </div>
     </div>
   );

@@ -52,7 +52,7 @@ function Monuments() {
               />
               <Link
                 to={`/monumentsDetail/${value?.id}`}
-                className="bg-[#000000b1] duration-300 group-hover:duration-300 group-hover:bg-[#ffffffcc] group-hover:text-black w-full h-[55px] absolute bottom-0 justify-center flex items-center text-white text-[20px] line-clamp-1 md:text-[18px] md:text-center md:leading-[22px]"
+                className="bg-[#000000b1] duration-300 group-hover:duration-300 group-hover:bg-[#ffffffcc] group-hover:text-black w-full h-[55px] absolute bottom-0 justify-center flex items-center text-white text-[20px] line-clamp-1 md:text-[18px] md:text-center md:leading-[22px] px-5 text-center leading-6"
               >
                 {value?.title_uz}
               </Link>

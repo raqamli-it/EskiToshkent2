@@ -16,6 +16,15 @@ function DateSwitcher() {
     "zulhijja",
   ];
 
+  moment.updateLocale("uz", {
+    months:
+      "yanvar_fevral_mart_aprel_may_iyun_iyul_avgust_sentyabr_oktabr_noyabr_dekabr".split(
+        "_"
+      ),
+  });
+
+  moment.locale("uz");
+
   const monthIndex = moment().iMonth(); // Hijriy oy indeksi olish
   const hijriMonth = hijriMonths[monthIndex]; // O'zgaruvchiga Lotin oy nomini olish
   return (
@@ -24,23 +33,14 @@ function DateSwitcher() {
         <span>{moment().format("YYYY")}</span>
         <span>- yil</span>
       </div>
-
       <div className="xl:text-[18px] lg:text-[16px]">
-        <span>
-          {moment().format("DD").startsWith("0")
-            ? moment().format("DD").slice(1)
-            : moment().format("DD")}
-        </span>
-
-        <span className="lowercase">- {moment().format("MMMM")}</span>
+        <span>{moment().format("D-MMMM", { locale: "uz" })}</span>
       </div>
-
       /{/* Hijriy data */}
       <div className="xl:text-[18px] lg:text-[16px]">
         <span>{moment().format("iYYYY")}</span>
         <span>- yil</span>
       </div>
-      
       <div className="xl:text-[18px] lg:text-[16px]">
         <span>
           {moment().format("iDD").startsWith("0")

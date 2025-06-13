@@ -31,14 +31,11 @@ function ArtifactsDetails() {
               decoding="async"
               src={data?.image}
               alt={data?.title_uz}
-              className="w-full lg:h-full lg:object-contain sm:object-none"
+              className="w-full lg:h-full h-[320px] lg:object-contain sm:object-none"
             />
           </div>
 
-          <div
-            className=""
-            dangerouslySetInnerHTML={{ __html: data?.context_uz }}
-          ></div>
+          <div dangerouslySetInnerHTML={{ __html: data?.context_uz }}></div>
         </div>
       </div>
     </div>

@@ -48,8 +48,6 @@ function HomeNews() {
                   src={value?.image}
                   alt={value?.title_uz}
                   className="h-full"
-                  decoding="async"
-                  loading="lazy"
                 />
               </div>
 
