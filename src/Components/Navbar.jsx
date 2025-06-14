@@ -1,3 +1,4 @@
+import navbarimg from "../assets/images/navbar.webp";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { HiMenu } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
@@ -7,6 +8,7 @@ import Time from "../Headers/Time";
 import DateSwitcher from "../Headers/DateSwitcher";
 import GlobalSearch from "../Headers/GlobalSearch";
 import { useState } from "react";
+
 // import WeatherApp from "../Headers/WeatherApp";
 
 function Navbar() {
@@ -23,7 +25,7 @@ function Navbar() {
           toggle
             ? "right-0 duration-500 ease-in"
             : "-right-[100%] duration-500 ease-in"
-        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[70px] md:bg-[#192957] md:h-[150px] md:py-0 md:p-3 md:w-full`}
+        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[70px] md:h-[150px] md:py-0 md:p-3 md:w-full md:bg-[#192957]`}
       >
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3">
           <GlobalSearch />
