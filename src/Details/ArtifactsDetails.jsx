@@ -27,8 +27,6 @@ function ArtifactsDetails() {
         <div className="grid grid-cols-[1fr_2fr] items-start gap-5 justify-between bg-white rounded-[20px] p-5 lg:grid-cols-1">
           <div className="h-[320px]">
             <img
-              loading="lazy"
-              decoding="async"
               src={data?.image}
               alt={data?.title_uz}
               className="w-full lg:h-full h-[320px] lg:object-contain sm:object-none"

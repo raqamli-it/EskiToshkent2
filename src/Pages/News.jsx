@@ -23,7 +23,7 @@ function News() {
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
         <div className="">
-          <h2 className="text-[42px] font-semibold text-[#9f9f9fc8] xl:text-[36px] md:text-[32px]">
+          <h2 className="text-[36px] font-semibold text-[#9f9f9fc8] xl:text-[36px] md:text-[32px]">
             Yangiliklar
           </h2>
 
@@ -38,8 +38,6 @@ function News() {
             >
               <div className="w-3/5 h-[360px] md:h-[340px] sm:w-full sm:h-[280px]">
                 <img
-                  loading="lazy"
-                  decoding="async"
                   src={value?.image}
                   alt={value?.title_uz}
                   className="h-full w-full transition duration-500 ease-in-out object-cover group-hover:scale-90"

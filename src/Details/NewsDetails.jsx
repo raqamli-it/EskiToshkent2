@@ -35,8 +35,6 @@ function NewsDetails() {
 
             <div className="h-[600px] w-full mt-5 lg:h-[500px] md:h-[400px]">
               <img
-                decoding="async"
-                loading="lazy"
                 className="w-full h-full mx-auto"
                 src={data?.image}
                 alt={data?.title_uz}

@@ -23,8 +23,6 @@ function AboutUs() {
             <img
               src={about_logo}
               alt="about_logo"
-              loading="lazy"
-              decoding="async"
               className="h-[100px] lg:h-[80px]"
             />
             <h3 className="text-white text-[28px] leading-[36px] border-b-[3px] py-[10px] my-5 lg:pb-1 lg:text-[24px] lg:leading-[30px]">
@@ -75,8 +73,6 @@ function AboutUs() {
               className="h-[400px] rounded-[20px] overflow-hidden relative group"
             >
               <img
-                loading="lazy"
-                decoding="async"
                 src={value?.image}
                 alt={value?.title_uz}
                 className="h-full w-full transition object-cover duration-500 ease-in-out group-hover:scale-110"

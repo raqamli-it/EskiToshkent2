@@ -30,7 +30,7 @@ function Monuments() {
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
         <div className="">
-          <h2 className="text-[42px] font-semibold text-[#9f9f9fc8] xl:text-[36px] md:text-[32px] sm:text-[26px]">
+          <h2 className="text-[36px] font-semibold text-[#9f9f9fc8] xl:text-[36px] md:text-[32px] sm:text-[26px]">
             Arxeologiya yodgorliklari
           </h2>
 
@@ -47,8 +47,7 @@ function Monuments() {
                 src={value?.image}
                 alt={value?.title_uz}
                 className="h-full w-full transition duration-500 ease-in-out object-cover group-hover:scale-110"
-                loading="lazy"
-                decoding="async"
+               
               />
               <Link
                 to={`/monumentsDetail/${value?.id}`}

@@ -28,13 +28,11 @@ function MuseumsDetails() {
     return match && match[2].length === 11 ? match[2] : null;
   }
 
-  console.log(data, "XXXX");
-
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
         <div className="">
-          <h2 className="text-[42px] font-semibold text-[#9f9f9fc8] xl:text-[32px] md:text-[26px] xl:leading-7 sm:text-[22px] sm:leading-6">
+          <h2 className="text-[36px] font-semibold text-[#9f9f9fc8] xl:text-[32px] md:text-[26px] xl:leading-7 sm:text-[22px] sm:leading-6">
             {data?.title_uz}
           </h2>
 
@@ -49,8 +47,6 @@ function MuseumsDetails() {
                   <img
                     src={data?.image}
                     alt={data?.title_uz}
-                    loading="lazy"
-                    decoding="async"
                     className="w-full h-full rounded-[20px]"
                   />
                   <button
@@ -66,8 +62,6 @@ function MuseumsDetails() {
                   src={`https://www.youtube.com/embed/${extractVideoId(
                     data?.video_link
                   )}`}
-                  loading="lazy"
-                  decoding="async"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title="YouTube video player"
                   frameBorder="0"
@@ -80,8 +74,6 @@ function MuseumsDetails() {
               <img
                 src={data?.image}
                 alt={data?.title_uz}
-                loading="lazy"
-                decoding="async"
                 className="w-full h-full rounded-[20px]"
               />
               <button

@@ -42,8 +42,6 @@ function MonumentsDetails() {
           <img
             src={data?.image}
             alt={data?.title_uz}
-            loading="lazy"
-            decoding="async"
             className="w-full h-[550px] md:h-[400px] sm:h-[340px]"
           />
 
@@ -79,8 +77,6 @@ function MonumentsDetails() {
               <img
                 src={data?.image}
                 alt={data?.title_uz}
-                loading="lazy"
-                decoding="async"
                 className="w-full h-[400px] sm:h-[340px]"
               />
             )}
@@ -115,8 +111,6 @@ function MonumentsDetails() {
                   <img
                     src={item?.image}
                     alt={item?.title}
-                    loading="lazy"
-                    decoding="async"
                     className="w-[70px] h-[70px] sm:w-[60px] sm:h-[60px]"
                   />
                   <span className="text-[18px] sm:text-[16px] font-medium">
@@ -130,8 +124,6 @@ function MonumentsDetails() {
           <div className="relative mt-10">
             <Zoom>
               <img
-                loading="lazy"
-                decoding="async"
                 src={
                   selectImg == null
                     ? data?.archaeologyPicture?.[0].image
@@ -142,13 +134,11 @@ function MonumentsDetails() {
                     ? data?.archaeologyPicture?.[0].title
                     : selectImg.title
                 }
-                className="w-full h-[550px] opacity-70 object-cover md:h-[460px] sm:h-[360px]"
+                className="w-full h-[550px] filter brightness-[30%] opacity-80 object-cover md:h-[460px] sm:h-[360px]"
               />
             </Zoom>
 
             <img
-              loading="lazy"
-              decoding="async"
               src={
                 selectImg == null
                   ? data?.archaeologyPicture?.[0].image
