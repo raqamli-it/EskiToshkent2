@@ -1,17 +1,21 @@
 import { Fade, Zoom } from "react-awesome-reveal";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { IoPlay } from "react-icons/io5";
 
 function MonumentsDetails() {
   const { id } = useParams();
   const [data, setData] = useState({});
+  const [dataId, setDataId] = useState([]);
   const [showVideo, setShowVideo] = useState(false);
   const [selectImg, setSelectImg] = useState(null);
+  const navigate = useNavigate();
 
   const getData = async () => {
     const respons = await axios.get(`/archaeologies/${id}/`);
+    const responsId = await axios.get(`/archaeologies/${id}/items`);
+    setDataId(responsId?.data);
     setData(respons?.data);
   };
 
@@ -26,6 +30,13 @@ function MonumentsDetails() {
   const SelectImg = (id) => {
     setSelectImg(id);
   };
+
+  const navigateAshyolar = (ashyolar) => {
+    console.log(ashyolar, "XXXX");
+    navigate(`/monumentsDetail/${id}/items`);
+  };
+
+  console.log(dataId, "tttttt");
 
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
@@ -51,7 +62,10 @@ function MonumentsDetails() {
           ></p>
 
           <div className="flex justify-center items-center gap-5 my-6">
-            <button className="bg-blue-950 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]">
+            <button
+              onClick={() => navigateAshyolar(dataId)}
+              className="bg-blue-950 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]"
+            >
               Ashyolar
             </button>
             <button className="bg-blue-950 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]">
