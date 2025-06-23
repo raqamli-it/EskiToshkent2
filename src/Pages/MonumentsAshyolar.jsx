@@ -16,7 +16,7 @@ function MonumentsAshyolar() {
     getData();
   }, []);
 
-  console.log(data, "KAMOLIDDIN ISLAMOV 2000");
+  //   console.log(data, "KAMOLIDDIN ISLAMOV 2000");
 
   return (
     <div className="w-full py-10 min-h-[75vh]">
@@ -42,17 +42,12 @@ function MonumentsAshyolar() {
                 <p className="text-[20px]">{item?.title_uz}</p>
 
                 <div className="flex items-center gap-3 font-serif">
-                  <span>Yaratilgan yili:</span>
                   <span
+                    className="h-[60px] line-clamp-2"
                     dangerouslySetInnerHTML={{
-                      __html: item?.context_uz.slice(0, 30),
+                      __html: item?.context_uz,
                     }}
                   ></span>
-                </div>
-
-                <div className="flex items-center gap-3 font-serif">
-                  <span>Topilgan yili:</span>
-                  <span>{item?.update.slice(0, 10)}</span>
                 </div>
               </div>
             </div>
