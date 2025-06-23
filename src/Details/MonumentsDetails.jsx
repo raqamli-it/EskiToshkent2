@@ -32,11 +32,10 @@ function MonumentsDetails() {
   };
 
   const navigateAshyolar = (ashyolar) => {
-    console.log(ashyolar, "XXXX");
-    navigate(`/monumentsDetail/${id}/items`);
+    if (ashyolar.length > 0) {
+      navigate(`/monumentsDetail/${id}/items`);
+    }
   };
-
-  console.log(dataId, "tttttt");
 
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
@@ -64,11 +63,13 @@ function MonumentsDetails() {
           <div className="flex justify-center items-center gap-5 my-6">
             <button
               onClick={() => navigateAshyolar(dataId)}
-              className="bg-blue-950 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]"
+              className={`bg-blue-800 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px] ${
+                !dataId.length > 0 && "cursor-not-allowed"
+              }`}
             >
               Ashyolar
             </button>
-            <button className="bg-blue-950 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]">
+            <button className="bg-blue-800 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]">
               <a href={data?.pasport} target="_blanck">
                 Passport
               </a>
