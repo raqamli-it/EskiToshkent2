@@ -26,6 +26,8 @@ function Artifacts() {
     getData(currentPage);
   }, [currentPage]);
 
+  console.log(data, "XXXXXXXXXXXX");
+
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -36,6 +38,8 @@ function Artifacts() {
 
           <div className="w-full h-[3px] bg-[#9f9f9fc8] my-[20px] xl:my-[10px]"></div>
         </div>
+
+        <div></div>
 
         <div className="grid grid-cols-4 gap-5 my-10 xl:grid-cols-3 lg:grid-cols-2 md:gap-3 sm:grid-cols-1 sm:gap-5">
           {data?.results?.map((value, index) => (

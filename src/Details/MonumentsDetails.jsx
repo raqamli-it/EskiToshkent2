@@ -75,9 +75,9 @@ function MonumentsDetails() {
               </a>
             </button>
           </div>
-
+          {console.log(data, "YYYYYYYYYYYYYYYYYYYYY")}
           <div>
-            {showVideo ? (
+            {showVideo && data?.video_link ? (
               <iframe
                 className="w-full h-[400px] sm:h-[340px]"
                 src={`${data?.video_link}?autoplay=1&mute=1`}
@@ -102,7 +102,7 @@ function MonumentsDetails() {
             >
               <IoPlay
                 className={`text-[24px] sm:text-[16px] ${
-                  showVideo ? "text-blue-700" : ""
+                  showVideo && data?.video_link ? "text-blue-700" : ""
                 }`}
               />
             </button>
