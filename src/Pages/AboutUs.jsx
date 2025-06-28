@@ -66,11 +66,11 @@ function AboutUs() {
           Ishtirokchilar
         </h2>
 
-        <div className="grid grid-cols-4 gap-5 my-10 xl:grid-cols-3 lg:grid-cols-2 md:gap-3 sm:grid-cols-1 sm:gap-5">
+        <div className="grid grid-cols-4 gap-5 my-10 xl:grid-cols-3 lg:grid-cols-2 md:gap-3 sm:grid-cols-1 sm:gap-5 overflow-hidden">
           {data?.results?.map((value, index) => (
             <div
               key={index}
-              className="h-[400px] rounded-[20px] overflow-hidden relative group"
+              className="h-[400px] rounded-[20px] relative group bg-[#E5E5E5] overflow-hidden"
             >
               <img
                 src={value?.image}
