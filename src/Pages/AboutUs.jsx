@@ -70,23 +70,31 @@ function AboutUs() {
           {data?.results?.map((value, index) => (
             <div
               key={index}
-              className="h-[400px] rounded-[20px] relative group bg-[#E5E5E5] overflow-hidden"
+              className="h-[400px] rounded-[20px] relative group bg-[#E5E5E5] overflow-hidden cursor-pointer"
             >
-              <img
-                src={value?.image}
-                alt={value?.title_uz}
-                className="h-full w-full transition object-cover duration-500 ease-in-out group-hover:scale-110"
-              />
-              <div className="leading-[28px] duration-300 group-hover:duration-300 bg-[#E5E5E5] group-hover:text-black w-full h-[85px] absolute bottom-0 justify-center flex items-center flex-col text-[18px] px-2 line-clamp-1">
+              <div className="w-full h-[295px] overflow-hidden">
+                <img
+                  decoding="async"
+                  src={value?.image}
+                  alt={value?.title_uz}
+                  className="w-full h-full transition object-cover duration-500 ease-in-out group-hover:scale-110"
+                />
+              </div>
+
+              <div className="leading-[28px] h-[105px] duration-300 group-hover:duration-300 bg-[#E5E5E5] group-hover:text-black w-full justify-center flex items-center flex-col text-[18px] px-2 py-[5px] line-clamp-1">
                 <h2
                   to="/"
-                  className="font-semibold h-[28px] line-clamp-1 mt-1 w-full text-center"
+                  className="font-semibold line-clamp-1 mt-1 w-full text-center h-[35px]"
                 >
                   {value?.fullname_uz}
                 </h2>
 
-                <h4 className="text-[16px] font-semibold mt-[3px] h-[52px] leading-6 px-3 w-full text-center line-clamp-2">
+                <h4 className="text-[17px] font-semibold leading-6 h-[35px] px-3 w-full text-center line-clamp-2">
                   {value?.pasition_uz}
+                </h4>
+
+                <h4 className="text-[17px] font-semibold leading-6 px-3 w-full h-[35px] text-center line-clamp-2">
+                  {value?.degree_uz}
                 </h4>
               </div>
             </div>
