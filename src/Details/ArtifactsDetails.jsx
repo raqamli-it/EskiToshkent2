@@ -15,8 +15,6 @@ function ArtifactsDetails() {
     getData();
   }, []);
 
-  console.log(data, "xxxx");
-
   return (
     <div className="w-full py-10">
       <div className="max-w-[1400px] mx-auto xl:px-5">

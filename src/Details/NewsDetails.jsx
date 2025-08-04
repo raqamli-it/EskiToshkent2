@@ -15,8 +15,6 @@ function NewsDetails() {
     getData();
   }, []);
 
-  console.log(data, "wwww");
-
   return (
     <div className="py-10 bg-white sm:pt-6">
       <div className="max-w-[1400px] mx-auto xl:px-5">

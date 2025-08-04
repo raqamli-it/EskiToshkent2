@@ -16,8 +16,6 @@ function MonumentsAshyolar() {
     getData();
   }, []);
 
-  //   console.log(data, "KAMOLIDDIN ISLAMOV 2000");
-
   return (
     <div className="w-full py-10 min-h-[75vh]">
       <div className="max-w-[1400px] mx-auto xl:px-5 grid grid-cols-4 gap-5 my-10 xl:grid-cols-3 lg:grid-cols-2 md:gap-3 sm:grid-cols-1 sm:gap-5">

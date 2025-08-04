@@ -15,8 +15,6 @@ function MonumentsAshyolarDetail() {
     getData();
   }, []);
 
-  console.log(data, "QQQQQQQQQQQQQ");
-
   return (
     <div className="w-full py-10 min-h-[75vh] bg-white">
       <div className="max-w-[1400px] mx-auto xl:px-5">

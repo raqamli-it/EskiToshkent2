@@ -13,7 +13,6 @@ function AboutUs() {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data, "xxxx");
 
   return (
     <div className="py-10 w-full">

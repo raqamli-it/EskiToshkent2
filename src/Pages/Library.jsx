@@ -24,7 +24,6 @@ function Library() {
   useEffect(() => {
     getData(currentPage);
   }, [currentPage]);
-  console.log(data, "xxxx");
 
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">

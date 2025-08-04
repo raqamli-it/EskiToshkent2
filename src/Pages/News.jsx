@@ -17,8 +17,6 @@ function News() {
     getData();
   }, []);
 
-  console.log(data);
-
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -31,7 +29,7 @@ function News() {
         </div>
 
         <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3">
-          {data?.map((value, index) => (
+          {data?.slice(-2).map((value, index) => (
             <div
               key={index}
               className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"

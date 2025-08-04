@@ -71,11 +71,10 @@ function MonumentsDetails() {
             </button>
             <button className="bg-blue-800 border-none px-5 py-2 text-white text-[18px] rounded-[16px] sm:text-[16px]">
               <a href={data?.pasport} target="_blanck">
-                Passport
+                Pasport
               </a>
             </button>
           </div>
-          {console.log(data, "YYYYYYYYYYYYYYYYYYYYY")}
           <div>
             {showVideo && data?.video_link ? (
               <iframe

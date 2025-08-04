@@ -26,8 +26,6 @@ function Artifacts() {
     getData(currentPage);
   }, [currentPage]);
 
-  console.log(data, "XXXXXXXXXXXX");
-
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
