@@ -29,7 +29,7 @@ function News() {
         </div>
 
         <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3">
-          {data?.slice(-2).map((value, index) => (
+          {data?.map((value, index) => (
             <div
               key={index}
               className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"
