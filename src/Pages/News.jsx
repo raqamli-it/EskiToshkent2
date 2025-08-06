@@ -17,6 +17,8 @@ function News() {
     getData();
   }, []);
 
+  // console.log(data, "UUUU");
+
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -29,37 +31,40 @@ function News() {
         </div>
 
         <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3">
-          {data?.map((value, index) => (
-            <div
-              key={index}
-              className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"
-            >
-              <div className="w-3/5 h-[360px] md:h-[340px] sm:w-full sm:h-[280px]">
-                <img
-                  src={value?.image}
-                  alt={value?.title_uz}
-                  className="h-full w-full transition duration-500 ease-in-out object-cover group-hover:scale-90"
-                />
-              </div>
-
-              <div className="flex flex-col justify-between w-2/5 p-5 xl:p-3 sm:w-full">
-                <div>
-                  <h2 className="text-[20px] text-black transition-colors duration-300 ease-in-out group-hover:text-white xl:leading-6 lg:leading-7">
-                    {value?.title_uz}
-                  </h2>
-
-                  <p
-                    dangerouslySetInnerHTML={{ __html: value?.context_uz }}
-                    className="line-clamp-3 text-black transition-colors duration-300 ease-in-out group-hover:text-white"
-                  ></p>
+          {data
+            ?.sort((a, b) => a.order - b.order)
+            .map((value, index) => (
+              <div
+                key={index}
+                className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"
+              >
+                {console.log(value, "YYYYY")}
+                <div className="w-3/5 h-[360px] md:h-[340px] sm:w-full sm:h-[280px]">
+                  <img
+                    src={value?.image}
+                    alt={value?.title_uz}
+                    className="h-full w-full transition duration-500 ease-in-out object-cover group-hover:scale-90"
+                  />
                 </div>
 
-                <span className="text-[18px] text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white sm:mt-3">
-                  {value?.update.substring(0, 10).split("-").join(".")}
-                </span>
+                <div className="flex flex-col justify-between w-2/5 p-5 xl:p-3 sm:w-full">
+                  <div>
+                    <h2 className="text-[20px] text-black transition-colors duration-300 ease-in-out group-hover:text-white xl:leading-6 lg:leading-7">
+                      {value?.title_uz}
+                    </h2>
+
+                    <p
+                      dangerouslySetInnerHTML={{ __html: value?.context_uz }}
+                      className="line-clamp-3 text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+                    ></p>
+                  </div>
+
+                  <span className="text-[18px] text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white sm:mt-3">
+                    {value?.update.substring(0, 10).split("-").join(".")}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>
