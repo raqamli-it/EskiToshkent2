@@ -107,7 +107,7 @@
     linear-gradient(90deg, rgb(10, 17, 72), rgb(35, 148, 228));
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   .pagination {
     gap: 10px;
   }
@@ -116,5 +116,17 @@
     width: 38px;
     height: 38px;
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination li a {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 }

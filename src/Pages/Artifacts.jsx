@@ -65,7 +65,7 @@ function Artifacts() {
           nextLabel={<FaArrowRight />}
           breakLabel={"..."}
           pageCount={pageCount}
-          marginPagesDisplayed={2}
+          marginPagesDisplayed={1}
           pageRangeDisplayed={2}
           onPageChange={handlePageClick}
           containerClassName={"pagination"}
