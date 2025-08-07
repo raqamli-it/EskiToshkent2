@@ -17,8 +17,6 @@ function News() {
     getData();
   }, []);
 
-  // console.log(data, "UUUU");
-
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -38,7 +36,6 @@ function News() {
                 key={index}
                 className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"
               >
-                {console.log(value, "YYYYY")}
                 <div className="w-3/5 h-[360px] md:h-[340px] sm:w-full sm:h-[280px]">
                   <img
                     src={value?.image}
