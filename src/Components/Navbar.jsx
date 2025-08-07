@@ -25,9 +25,9 @@ function Navbar() {
           toggle
             ? "right-0 duration-500 ease-in"
             : "-right-[100%] duration-500 ease-in"
-        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[70px] md:h-[150px] md:py-0 md:p-3 md:w-full md:bg-[#192957]`}
+        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[70px] md:h-[170px] md:py-0 md:p-3 md:w-full md:bg-[#192957]`}
       >
-        <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3">
+        <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
         </div>
 
@@ -50,93 +50,177 @@ function Navbar() {
           />
         </Link>
 
-        <Fade
-          delay={200}
-          duration={1000}
-          fraction={0.5}
-          direction={"right"}
-          triggerOnce
-          cascade
-          className={`${
-            toggle
-              ? "right-0 duration-500 ease-in"
-              : "-right-[100%] duration-500 ease-in"
-          } md:bg-[#192957] md:top-[220px] md:absolute md:w-full duration-500 ease-in`}
-        >
-          <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/news"
-            >
-              Yangiliklar
-            </NavLink>
+        {window.innerWidth > 768 ? (
+          <Fade
+            delay={200}
+            duration={1000}
+            fraction={0.5}
+            direction={"right"}
+            triggerOnce
+            cascade
+            className={`${
+              toggle
+                ? "right-0 duration-500 ease-in"
+                : "-right-[100%] duration-500 ease-in"
+            } md:bg-[#192957] md:top-[240px] md:absolute md:w-full duration-500 ease-in`}
+          >
+            <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/news"
+              >
+                Yangiliklar
+              </NavLink>
 
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/monuments"
-            >
-              Yodgorliklar
-            </NavLink>
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/monuments"
+              >
+                Yodgorliklar
+              </NavLink>
 
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/artifacts"
-            >
-              Ashyolar
-            </NavLink>
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/artifacts"
+              >
+                Ashyolar
+              </NavLink>
 
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/museums"
-            >
-              Muzeylar
-            </NavLink>
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/museums"
+              >
+                Muzeylar
+              </NavLink>
 
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/library"
-            >
-              Kutubxona
-            </NavLink>
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/library"
+              >
+                Kutubxona
+              </NavLink>
 
-            <NavLink
-              onClick={openButton}
-              className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
-                  isActive ? "text-green-500 before:scale-x-100" : ""
-                }`
-              }
-              to="/about"
-            >
-              Biz haqimizda
-            </NavLink>
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/about"
+              >
+                Biz haqimizda
+              </NavLink>
+            </div>
+          </Fade>
+        ) : (
+          <div
+            className={`${
+              toggle
+                ? "right-0 duration-500 ease-in"
+                : "-right-[100%] duration-500 ease-in"
+            } md:bg-[#192957] md:top-[240px] md:absolute md:w-full duration-500 ease-in`}
+          >
+            <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/news"
+              >
+                Yangiliklar
+              </NavLink>
+
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/monuments"
+              >
+                Yodgorliklar
+              </NavLink>
+
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/artifacts"
+              >
+                Ashyolar
+              </NavLink>
+
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/museums"
+              >
+                Muzeylar
+              </NavLink>
+
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/library"
+              >
+                Kutubxona
+              </NavLink>
+
+              <NavLink
+                onClick={openButton}
+                className={({ isActive }) =>
+                  `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                    isActive ? "text-green-500 before:scale-x-100" : ""
+                  }`
+                }
+                to="/about"
+              >
+                Biz haqimizda
+              </NavLink>
+            </div>
           </div>
-        </Fade>
+        )}
 
         <button onClick={openButton} className="hidden md:block cursor-pointer">
           {toggle ? (

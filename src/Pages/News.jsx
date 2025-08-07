@@ -30,7 +30,7 @@ function News() {
           <div className="w-full h-[3px] bg-[#9f9f9fc8] my-[20px] xl:my-[10px]"></div>
         </div>
 
-        <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3">
+        <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3 md:gap-6">
           {data
             ?.sort((a, b) => a.order - b.order)
             .map((value, index) => (
