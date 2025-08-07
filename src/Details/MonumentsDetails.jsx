@@ -37,9 +37,7 @@ function MonumentsDetails() {
     }
   };
 
-  // console.log(data, "data");
 
-  console.log(data?.archaeologyPicture, "dataId");
 
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
