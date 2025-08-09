@@ -37,8 +37,6 @@ function MonumentsDetails() {
     }
   };
 
-
-
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -62,13 +60,13 @@ function MonumentsDetails() {
               return img.title.toLowerCase() === "qr kod";
             })
             .map((img, idx) => (
-              <div>
+              <div className="mb-8">
+                <p className="text-[20px] mt-2 font-bold mb-3">{img.title}</p>
                 <img
                   key={idx}
                   src={img.image}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-[450px]  md:h-[360px] sm:h-[320px] object-cover"
                 />
-                <p className="text-[20px] my-3 font-bold">{img.title}</p>
               </div>
             ))}
 
@@ -88,7 +86,8 @@ function MonumentsDetails() {
             <div className="w-full h-[2px] bg-[#5050bb72] mt-2 mb-5"></div>
           </div>
 
-          <div>
+          {/* Bu kamentga olingan code o'chirilmasin chunki bu yana qaytaringlar desa kamentdan chiqarib qo'yiladi */}
+          {/* <div>
             {data?.archaeologyPicture?.map((item, idx) => (
               <div key={idx}>
                 <button
@@ -138,6 +137,19 @@ function MonumentsDetails() {
               }
               className="w-3/5 h-[420px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-4/5 md:h-[360px] sm:h-[260px]"
             />
+          </div> */}
+
+          <div>
+            {data?.archaeologyPicture?.map((item, idx) => (
+              <div key={idx} className="mb-8">
+                <p className="text-[20px] mt-2 font-bold mb-3">{item?.title}</p>
+                <img
+                  src={item?.image}
+                  alt={item?.title}
+                  className="w-full h-[450px]  md:h-[360px] sm:h-[320px] object-cover"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="flex justify-center flex-col items-center gap-5 my-6">
