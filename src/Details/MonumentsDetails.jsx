@@ -62,7 +62,8 @@ function MonumentsDetails() {
             .map((img, idx) => (
               <div key={idx} className="mb-8">
                 <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[18px] sm:leading-[26px] mb-3">
-                  {img.title}
+                  {/* {img.title}   */}
+                  Joylashuv belgisi (QR-kod)
                 </p>
                 <img
                   key={idx}
