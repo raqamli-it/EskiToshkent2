@@ -60,8 +60,10 @@ function MonumentsDetails() {
               return img.title.toLowerCase() === "qr kod";
             })
             .map((img, idx) => (
-              <div className="mb-8">
-                <p className="text-[20px] mt-2 font-bold mb-3">{img.title}</p>
+              <div key={idx} className="mb-8">
+                <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[18px] sm:leading-[26px] mb-3">
+                  {img.title}
+                </p>
                 <img
                   key={idx}
                   src={img.image}
@@ -72,6 +74,10 @@ function MonumentsDetails() {
 
           {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri  */}
 
+          <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px] mb-3">
+            Google Yer (Google earth) dasturidagi ko‘rinishi
+          </p>
+
           <img
             src={data?.image}
             alt={data?.title_uz}
@@ -79,7 +85,7 @@ function MonumentsDetails() {
           />
 
           <div className="my-10">
-            <h2 className="text-[24px] font-semibold text-[#020202] sm:text-[20px] sm:leading-[26px]">
+            <h2 className="text-[24px] font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px]">
               Belgilangan davrdagi yodgorlik ko'rinishi
             </h2>
 
@@ -140,16 +146,20 @@ function MonumentsDetails() {
           </div> */}
 
           <div>
-            {data?.archaeologyPicture?.map((item, idx) => (
-              <div key={idx} className="mb-8">
-                <p className="text-[20px] mt-2 font-bold mb-3">{item?.title}</p>
-                <img
-                  src={item?.image}
-                  alt={item?.title}
-                  className="w-full h-[450px]  md:h-[360px] sm:h-[320px] object-cover"
-                />
-              </div>
-            ))}
+            {data?.archaeologyPicture
+              ?.filter((value) => value?.title.toLowerCase() !== "qr kod")
+              .map((item, idx) => (
+                <div key={idx} className="mb-8">
+                  <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px] mb-3">
+                    {item?.title}
+                  </p>
+                  <img
+                    src={item?.image}
+                    alt={item?.title}
+                    className="w-full h-[450px]  md:h-[360px] sm:h-[320px] object-cover"
+                  />
+                </div>
+              ))}
           </div>
 
           <div className="flex justify-center flex-col items-center gap-5 my-6">
