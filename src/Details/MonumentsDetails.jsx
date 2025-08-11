@@ -61,21 +61,23 @@ function MonumentsDetails() {
             })
             .map((img, idx) => (
               <div key={idx} className="mb-8">
-                <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[18px] sm:leading-[26px] mb-3">
+                <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[18px] sm:leading-[26px]">
                   {/* {img.title}   */}
                   Joylashuv belgisi (QR-kod)
                 </p>
-                <img
-                  key={idx}
-                  src={img.image}
-                  className="w-full h-[450px]  md:h-[360px] sm:h-[320px] object-cover"
-                />
+                <div className="w-full h-[560px] overflow-hidden md:h-[420px] sm:h-[360px]">
+                  <img
+                    key={idx}
+                    src={img.image}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             ))}
 
           {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri  */}
 
-          <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px] mb-3">
+          <p className="text-[20px] font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px] mb-3">
             Google Yer (Google earth) dasturidagi ko‘rinishi
           </p>
 
