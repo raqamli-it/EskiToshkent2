@@ -59,7 +59,7 @@ function MonumentsDetails() {
           {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri */}
           {data?.archaeologyPicture
             ?.filter((img) => {
-              return img.order !== 0;
+              return img.order === 0;
             })
             .map((img, idx) => (
               <div key={idx} className="mb-8">
@@ -152,7 +152,7 @@ function MonumentsDetails() {
 
           <div>
             {data?.archaeologyPicture
-              ?.filter((value) => value?.order === 0)
+              ?.filter((value) => value?.order !== 0)
               .sort((a, b) => b.order - a.order)
               .map((item, idx) => (
                 <div key={idx} className="mb-8">
