@@ -37,6 +37,8 @@ function MonumentsDetails() {
     }
   };
 
+  // console.log(data, "DATA");
+
   return (
     <div className="w-full py-10 bg-white min-h-[75vh]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -57,7 +59,7 @@ function MonumentsDetails() {
           {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri */}
           {data?.archaeologyPicture
             ?.filter((img) => {
-              return img.title.toLowerCase() === "qr kod";
+              return img.order !== 0;
             })
             .map((img, idx) => (
               <div key={idx} className="mb-8">
@@ -150,7 +152,8 @@ function MonumentsDetails() {
 
           <div>
             {data?.archaeologyPicture
-              ?.filter((value) => value?.title.toLowerCase() !== "qr kod")
+              ?.filter((value) => value?.order === 0)
+              .sort((a, b) => b.order - a.order)
               .map((item, idx) => (
                 <div key={idx} className="mb-8">
                   <p className="text-[20px] mt-2 font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px] mb-3">
