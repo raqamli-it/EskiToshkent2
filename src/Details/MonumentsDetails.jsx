@@ -54,7 +54,7 @@ function MonumentsDetails() {
             className="my-5"
           ></p>
 
-          {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri  */}
+          {/* title===qr kod  bo'lgan rasimlar chiqadigan yeri */}
           {data?.archaeologyPicture
             ?.filter((img) => {
               return img.title.toLowerCase() === "qr kod";
