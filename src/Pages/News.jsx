@@ -17,6 +17,8 @@ function News() {
     getData();
   }, []);
 
+  console.log(data, "DATA");
+
   return (
     <div className="py-10 w-full bg-[#f1ebeb13]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
@@ -30,7 +32,7 @@ function News() {
 
         <div className="my-10 grid grid-cols-2 gap-5 lg:grid-cols-1 lg:gap-y-3 md:gap-6">
           {data
-            ?.sort((a, b) => a.order - b.order)
+            ?.sort((a, b) => b.order - a.order)
             .map((value, index) => (
               <div
                 key={index}
