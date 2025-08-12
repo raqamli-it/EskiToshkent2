@@ -43,7 +43,7 @@ function MonumentsDetails() {
     <div className="w-full py-10 bg-white min-h-[75vh]">
       <div className="max-w-[1400px] mx-auto xl:px-5">
         <div>
-          <h2 className="text-[36px] font-semibold text-[#9f9f9fc8] md:text-[28px] sm:text-[24px] sm:leading-8">
+          <h2 className="text-[36px] font-semibold text-[#3f3f3f] md:text-[28px] sm:text-[24px] sm:leading-8">
             {data?.title_uz}
           </h2>
 
@@ -90,7 +90,7 @@ function MonumentsDetails() {
           />
 
           <div className="my-10">
-            <h2 className="text-[24px] font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px]">
+            <h2 className="text-[20px] font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px]">
               Belgilangan davrdagi yodgorlik ko'rinishi
             </h2>
 
