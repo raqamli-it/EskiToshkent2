@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function News() {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   const getData = async () => {
     try {
@@ -35,6 +37,7 @@ function News() {
             ?.sort((a, b) => b.order - a.order)
             .map((value, index) => (
               <div
+                onClick={() => navigate(`/newsDetail/${value.id}`)}
                 key={index}
                 className="flex rounded-[20px] overflow-hidden bg-[#717171a4] group sm:flex-col"
               >
@@ -58,9 +61,15 @@ function News() {
                     ></p>
                   </div>
 
-                  <span className="text-[18px] text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white sm:mt-3">
-                    {value?.update.substring(0, 10).split("-").join(".")}
-                  </span>
+                  <div className="flex justify-between items-center">
+                    <span className="text-[18px] text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white sm:mt-3">
+                      {value?.update.substring(0, 10).split("-").join(".")}
+                    </span>
+
+                    <button className="text-green-900 font-serif text-[18px] leading-5 group-hover:text-white p-0 border-b-[1px] border-green-900 group-hover:border-white">
+                      Batafsil
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
