@@ -91,7 +91,7 @@ function MonumentsDetails() {
 
           <div className="my-10">
             <h2 className="text-[20px] font-semibold text-[#020202] sm:text-[16px] sm:leading-[26px]">
-              Belgilangan davrdagi yodgorlik ko'rinishi
+              Belgilangan chog'dagi yodgorlik ko'rinishi
             </h2>
 
             <div className="w-full h-[2px] bg-[#5050bb72] mt-2 mb-5"></div>
