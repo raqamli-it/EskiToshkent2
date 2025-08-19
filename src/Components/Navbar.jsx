@@ -31,7 +31,7 @@ function Navbar() {
         <div className="wrapper">
           <ul className="text">
             <li>
-              <span>Sayt sinov rejimida ishlayapti</span>
+              <span>Sayt sinov yo‘sinida ishlamoqda!</span>
             </li>
             <button onClick={CloseBox}>
               <MdClose className="text-[24px] text-white" />
