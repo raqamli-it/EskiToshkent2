@@ -37,13 +37,11 @@
   white-space: nowrap;
   overflow: hidden;
   font-size: 16px;
-  border-right: 2px solid white; /* Cursor */
-  width: 0; /* Animatsiya boshlanishi uchun */
-  animation: typing 8s steps(80, end) infinite,
-    blink 0.7s step-end infinite alternate;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 8s steps(80, end) infinite;
 }
 
-/* Harflab yozish animatsiyasi */
 @keyframes typing {
   0% {
     width: 0;
@@ -53,13 +51,11 @@
     width: 100%;
   }
 
+  65% {
+    width: 100%;
+  }
+
   100% {
     width: 0;
   }
 }
-
-/* @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-} */
