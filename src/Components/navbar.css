@@ -1,0 +1,65 @@
+.wrapper {
+  display: inline-flex;
+  margin: 0;
+  padding: 0 10px;
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  z-index: 999;
+  align-items: center;
+}
+
+.wrapper .text {
+  padding: 0;
+  height: 100%;
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .text li {
+  list-style: none;
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  height: 20px;
+  overflow-y: hidden;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+}
+
+.wrapper .text li span {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+  border-right: 2px solid white; /* Cursor */
+  width: 0; /* Animatsiya boshlanishi uchun */
+  animation: typing 8s steps(80, end) infinite,
+    blink 0.7s step-end infinite alternate;
+}
+
+/* Harflab yozish animatsiyasi */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+/* @keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */

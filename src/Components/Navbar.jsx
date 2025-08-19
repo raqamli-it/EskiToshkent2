@@ -1,5 +1,6 @@
 import navbarimg from "../assets/images/navbar.webp";
 import { RiCloseLargeLine } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.webp";
@@ -8,18 +9,37 @@ import Time from "../Headers/Time";
 import DateSwitcher from "../Headers/DateSwitcher";
 import GlobalSearch from "../Headers/GlobalSearch";
 import { useState } from "react";
+import "./navbar.css";
 
 // import WeatherApp from "../Headers/WeatherApp";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const [close, setClose] = useState(true);
 
   const openButton = () => {
     setToggle((prev) => !prev);
   };
 
+  const CloseBox = () => {
+    setClose(false);
+  };
+
   return (
     <div className="w-full fixed top-0 left-0 z-10 md:px-5 navbar_container">
+      {close && (
+        <div className="wrapper">
+          <ul className="text">
+            <li>
+              <span>Sayt sinov rejimida ishlayapti</span>
+            </li>
+            <button onClick={CloseBox}>
+              <MdClose className="text-[24px] text-white" />
+            </button>
+          </ul>
+        </div>
+      )}
+
       <div
         className={`${
           toggle
@@ -30,18 +50,13 @@ function Navbar() {
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
         </div>
-
         <Time />
-
         <DateSwitcher />
-
         <div className="md:hidden h-full w-[25%] lg:w-[35%] md:w-full md:pb-3">
           <GlobalSearch />
         </div>
-
         {/* <WeatherApp /> */}
       </div>
-
       <div className="max-w-[1400px] mx-auto flex items-center justify-between xl:px-5">
         <Link to="/">
           <img
