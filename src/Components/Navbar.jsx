@@ -58,12 +58,12 @@ function Navbar() {
         {/* <WeatherApp /> */}
       </div>
       <div className="max-w-[1400px] mx-auto flex items-center justify-between xl:px-5">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="logo"
-            className="w-[110px] h-[110px] xl:w-[90px] xl:h-[80px] lg:w-[80px] lg:h-[70px]"
-          />
+        <Link
+          to="/"
+          style={{ fontFamily: "cursive" }}
+          className="text-[64px] italic font-black text-white lg:text-[52px] md:text-[42px] sm:text-[32px]"
+        >
+          ET
         </Link>
 
         <Fade
