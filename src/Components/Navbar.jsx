@@ -45,7 +45,7 @@ function Navbar() {
           toggle
             ? "right-0 duration-500 ease-in"
             : "-right-[100%] duration-500 ease-in"
-        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[70px] md:h-[170px] md:py-0 md:p-3 md:w-full md:bg-[#192957]`}
+        } max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[107px] md:h-[170px] md:py-0 md:p-3 md:w-full md:bg-[#192957] sm:top-[92px]`}
       >
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
@@ -57,7 +57,8 @@ function Navbar() {
         </div>
         {/* <WeatherApp /> */}
       </div>
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between xl:px-5">
+
+      <div className="max-w-[1400px] mx-auto flex items-end justify-between xl:px-5 pb-5">
         <Link
           to="/"
           style={{ fontFamily: "cursive" }}
@@ -77,7 +78,7 @@ function Navbar() {
             toggle
               ? "right-0 duration-500 ease-in"
               : "-right-[100%] duration-500 ease-in"
-          } md:bg-[#192957] md:top-[240px] md:absolute md:w-full duration-500 ease-in`}
+          } md:bg-[#192957] md:top-[240px] md:absolute md:w-full duration-500 ease-in sm:top-[260px]`}
         >
           <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
             <NavLink
