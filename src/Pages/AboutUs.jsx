@@ -20,7 +20,7 @@ function AboutUs() {
   }, []);
 
   return (
-    <div className="py-10 w-full">
+    <div className="py-20 w-full">
       <div className="max-w-[1400px] mx-auto xl:px-5">
         <div className="bg-[#E5E5E5] rounded-[12px] p-[35px] md:p-[25px] sm:p-5">
           <p className="text-[22px] indent-10 text-justify sm:indent-5 md:text-[18px] sm:text-[16px]">
