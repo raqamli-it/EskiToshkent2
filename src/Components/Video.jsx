@@ -24,7 +24,7 @@ function Video() {
         src={video}
         ref={videoRef}
         type="video/mp4"
-        className="w-full"
+        className="w-full md:h-[400px] md:w-full"
         muted
         // controls
         autoPlay

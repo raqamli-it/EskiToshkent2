@@ -3,7 +3,7 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/images/logo.webp";
+import logo from "../assets/icons/et.webp";
 import { Fade } from "react-awesome-reveal";
 import Time from "../Headers/Time";
 import DateSwitcher from "../Headers/DateSwitcher";
@@ -24,8 +24,6 @@ function Navbar() {
   const CloseBox = () => {
     setClose(false);
   };
-
-  console.log(close, "dddd");
 
   return (
     <div className="w-full fixed top-0 left-0 z-10 md:px-5 navbar_container">
@@ -64,12 +62,8 @@ function Navbar() {
       </div>
 
       <div className="max-w-[1400px] mx-auto flex items-end justify-between xl:px-5 pb-5">
-        <Link
-          to="/"
-          style={{ fontFamily: "cursive" }}
-          className="text-[64px] italic font-black text-white lg:text-[52px] md:text-[42px] sm:text-[32px]"
-        >
-          ET
+        <Link to="/" className="w-[100px] lg:w-[90px] md:w-[80px] sm:w-[70px]">
+          <img src={logo} alt="logo" className="" />
         </Link>
 
         <Fade
