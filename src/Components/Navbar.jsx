@@ -1,4 +1,3 @@
-import navbarimg from "../assets/images/navbar.webp";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
@@ -39,7 +38,7 @@ function Navbar() {
           </ul>
         </div>
       ) : (
-        <h1 className="opacity-0">ss</h1>
+        <h1 className="opacity-0"></h1>
       )}
 
       <div
@@ -48,11 +47,13 @@ function Navbar() {
             ? "right-0 duration-500 ease-in"
             : "-right-[100%] duration-500 ease-in"
         }
-    max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[107px] md:h-[170px] md:py-0 md:p-3 md:w-full md:bg-[#192957] sm:top-[92px]`}
+        ${close ? "sm:top-[104px]" : "sm:top-[80px]"}
+    max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[110px] md:h-[170px] md:py-0 md:w-full md:bg-[#192957]`}
       >
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
         </div>
+
         <Time />
         <DateSwitcher />
         <div className="md:hidden h-full w-[25%] lg:w-[35%] md:w-full md:pb-3">
@@ -61,10 +62,19 @@ function Navbar() {
         {/* <WeatherApp /> */}
       </div>
 
-      <div className="max-w-[1400px] mx-auto flex items-end justify-between xl:px-5 pb-5">
-        <Link to="/" className="w-[100px] lg:w-[90px] md:w-[80px] sm:w-[70px]">
-          <img src={logo} alt="logo" className="" />
-        </Link>
+      <div className="max-w-[1400px] mx-auto flex items-end justify-between xl:px-5 pb-5 md:pt-3">
+        <div className="flex items-end">
+          <Link
+            to="/"
+            className="w-[100px] lg:w-[90px] md:w-[80px] sm:w-[70px]"
+          >
+            <img src={logo} alt="logo" className="" />
+          </Link>
+
+          <span className="relative bottom-2 -left-3 text-[#d5d5d5] tracking-[2px] text-[20px] font-normal md:text-[18px] sm:text-[16px]">
+            Eskitoshkent.uz
+          </span>
+        </div>
 
         <Fade
           delay={200}
@@ -77,7 +87,9 @@ function Navbar() {
             toggle
               ? "right-0 duration-500 ease-in"
               : "-right-[100%] duration-500 ease-in"
-          } md:bg-[#192957] md:top-[276px] md:absolute md:w-full duration-500 ease-in sm:top-[260px]`}
+          } ${
+            close ? "sm:top-[274px]" : "sm:top-[250px]"
+          } md:bg-[#192957] md:top-[276px] md:absolute md:w-full duration-500 ease-in`}
         >
           <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
             <NavLink

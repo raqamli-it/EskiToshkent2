@@ -17,28 +17,27 @@ function Video() {
       setIsPaused(!isPaused);
     }
   };
-
+  // salomat
   return (
-    <div className="w-full h-[75vh] relative overflow-hidden flex justify-center items-center lg:h-[55vh] md:h-[38vh] sm:h-[26vh]">
+    <div className="w-full h-[570px] relative overflow-hidden flex justify-center -mt-[20px] items-center lg:h-[500px] md:h-[345px]">
       <video
         src={video}
         ref={videoRef}
         type="video/mp4"
-        className="w-full md:h-[400px] md:w-full"
+        className="w-full h-full object-cover md:h-[500px] md:mt-[12px]"
         muted
-        // controls
         autoPlay
         loop
       ></video>
 
       <button
         onClick={handlePlayPause}
-        className="absolute right-[4%] bottom-[15%] w-[60px] rounded-full h-[60px] bg-[#000000d1] hover:bg-[#004d80] xl:w-[50px] xl:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] xl:bottom-[20%]"
+        className="absolute right-[4%] bottom-[15%] md:right-[8%] md:bottom-[10%] w-[60px] rounded-full h-[60px] bg-[#000000d1] hover:bg-[#004d80] xl:w-[50px] xl:h-[50px] md:w-[40px] md:h-[40px] xl:bottom-[20%]"
       >
         {isPaused ? (
-          <PiPauseBold className="text-[30px] text-white absolute left-[25%] top-[50%] transform -translate-y-1/2 xl:text-[24px] md:text-[18px] sm:text-[14px] md:left-[28%]" />
+          <PiPauseBold className="text-[30px] text-white absolute left-[25%] top-[50%] transform -translate-y-1/2 xl:text-[24px] md:text-[18px] md:left-[28%]" />
         ) : (
-          <PiPlayBold className="text-[30px] text-white absolute left-[25%] top-[50%] transform -translate-y-1/2 xl:text-[24px] md:text-[18px] sm:text-[14px] md:left-[28%]" />
+          <PiPlayBold className="text-[30px] text-white absolute left-[25%] top-[50%] transform -translate-y-1/2 xl:text-[24px] md:text-[18px] md:left-[28%]" />
         )}
       </button>
     </div>

@@ -50,7 +50,7 @@ function HomeNews() {
                   <img
                     src={value?.image}
                     alt={value?.title_uz}
-                    className="h-full"
+                    className="h-full w-full"
                   />
                 </div>
 
