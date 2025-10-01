@@ -71,9 +71,9 @@ function Navbar() {
             <img src={logo} alt="logo" className="" />
           </Link>
 
-          <span className="relative bottom-2 -left-3 text-[#d5d5d5] tracking-[2px] text-[20px] font-normal md:text-[18px] sm:text-[16px]">
+          <h2 className="relative bottom-2 -left-3 text-green-700 font-semibold tracking-[2px] text-[20px] md:text-[18px] md:text-white sm:text-[16px]">
             Eskitoshkent.uz
-          </span>
+          </h2>
         </div>
 
         <Fade
