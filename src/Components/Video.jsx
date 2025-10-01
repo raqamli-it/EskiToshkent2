@@ -17,9 +17,8 @@ function Video() {
       setIsPaused(!isPaused);
     }
   };
-  // salomat
   return (
-    <div className="w-full h-[570px] relative overflow-hidden flex justify-center -mt-[20px] items-center lg:h-[500px] md:h-[345px]">
+    <div className="w-full h-[570px] relative overflow-hidden flex justify-center -mt-[22px] items-center lg:h-[500px] md:h-[345px]">
       <video
         src={video}
         ref={videoRef}
