@@ -24,8 +24,6 @@ function GlobalSearch() {
     val?.name?.toLowerCase().includes(search?.toLowerCase())
   );
 
-  console.log(findText);
-
   return (
     <form className="h-full relative text-white text-[20px] xl:text-[18px] lg:text-[16px]">
       <input

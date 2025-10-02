@@ -47,8 +47,12 @@ function Navbar() {
             ? "right-0 duration-500 ease-in"
             : "-right-[100%] duration-500 ease-in"
         }
-        ${close ? "sm:top-[104px]" : "sm:top-[80px]"}
-    max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:top-[110px] md:h-[170px] md:py-0 md:w-full md:bg-[#192957]`}
+        ${
+          close
+            ? "sm:top-[104px] md:top-[110px]"
+            : "sm:top-[80px] md:top-[87px]"
+        }
+    max-w-[1400px] mx-auto flex items-center justify-end gap-5 py-[14px] h-[70px] xl:gap-3 xl:px-5 md:absolute md:flex-col md:h-[170px] md:py-0 md:w-full md:bg-[#192957]`}
       >
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
@@ -68,7 +72,7 @@ function Navbar() {
             to="/"
             className="w-[100px] lg:w-[90px] md:w-[80px] sm:w-[70px]"
           >
-            <img src={logo} alt="logo" className="" />
+            <img src={logo} alt="logo" />
           </Link>
 
           <h2 className="relative bottom-2 -left-3 text-green-700 font-semibold tracking-[2px] text-[20px] md:text-[18px] md:text-white sm:text-[16px]">
@@ -88,8 +92,8 @@ function Navbar() {
               ? "right-0 duration-500 ease-in"
               : "-right-[100%] duration-500 ease-in"
           } ${
-            close ? "sm:top-[274px]" : "sm:top-[250px]"
-          } md:bg-[#192957] md:top-[276px] md:absolute md:w-full duration-500 ease-in`}
+            close ? "md:top-[274px]" : "md:top-[250px]"
+          } md:bg-[#192957] md:absolute md:w-full duration-500 ease-in`}
         >
           <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4 md:flex-col md:p-3">
             <NavLink
