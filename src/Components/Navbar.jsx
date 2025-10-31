@@ -167,7 +167,7 @@ function Navbar() {
       {/* md dan kichkina xolatidagi code */}
 
       <div className={`hidden md:block relative px-[10px]`}>
-        <div className="flex items-center justify-between h-[70px]">
+        <div className="flex items-center justify-between h-[90px]">
           <div className="flex items-end">
             <Link
               to="/"
@@ -196,7 +196,7 @@ function Navbar() {
         <div
           className={`${
             toggle ? "right-0" : "-right-[100%]"
-          } absolute w-full top-[70px] px-[10px] bg-[#192957] duration-500 ease-in-out`}
+          } absolute w-full top-[90px] px-[10px] bg-[#192957] duration-500 ease-in-out`}
         >
           <div>
             <GlobalSearch />
@@ -212,7 +212,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/news"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className={`h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500`}
             >
               Yangiliklar
             </NavLink>
@@ -220,7 +220,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/monuments"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
             >
               Yodgorliklar
             </NavLink>
@@ -228,7 +228,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/artifacts"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
             >
               Ashyolar
             </NavLink>
@@ -236,7 +236,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/museums"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
             >
               Muzeylar
             </NavLink>
@@ -244,7 +244,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/library"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
             >
               Kutubxona
             </NavLink>
@@ -252,7 +252,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/about"
-              className="h-[48px] text-white flex items-center text-[18px]"
+              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
             >
               Biz haqimizda
             </NavLink>
