@@ -60,7 +60,7 @@ function GlobalSearch() {
             </div>
           </div>
         ) : (
-          <p className="text-white mt-2">Hech narsa topilmadi</p>
+          <p className="text-red-800">Hech narsa topilmadi</p>
         ))}
     </form>
   );

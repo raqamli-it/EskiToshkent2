@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import Time from "../Headers/Time";
 import DateSwitcher from "../Headers/DateSwitcher";
 import GlobalSearch from "../Headers/GlobalSearch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.css";
 
 // import WeatherApp from "../Headers/WeatherApp";
@@ -15,6 +15,22 @@ import "./navbar.css";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [close, setClose] = useState(true);
+  const [removeClass, setRemoveClass] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      window.innerWidth <= 768 ? setRemoveClass(false) : setRemoveClass(true);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log(removeClass, "removeClass removeClass removeClass removeClass");
 
   const openButton = () => {
     setToggle((prev) => !prev);
@@ -25,7 +41,11 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full fixed top-0 left-0 z-10 md:px-5 navbar_container">
+    <div
+      className={`w-full fixed top-0 left-0 z-10 md:px-5 ${
+        removeClass ? "navbar_container" : "bg-[#192957]"
+      }`}
+    >
       {close ? (
         <div className="wrapper">
           <ul className="text md:hidden">
@@ -57,6 +77,7 @@ function Navbar() {
         <div className="hidden md:block h-full w-[25%] lg:w-[35%] md:w-full md:pb-3 md:mt-5">
           <GlobalSearch />
         </div>
+        {/* mana asosiy o'zgartirish amalga oshirildi eskitoshkent dan */}
 
         <Time />
         <DateSwitcher />
@@ -84,7 +105,7 @@ function Navbar() {
           delay={200}
           duration={1000}
           fraction={0.5}
-          direction={"right"}
+          direction={"up"}
           triggerOnce
           cascade
           className={`${
