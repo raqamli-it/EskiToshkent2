@@ -25,22 +25,22 @@ function GlobalSearch() {
   );
 
   return (
-    <form className="h-full relative text-white text-[20px] xl:text-[18px] lg:text-[16px]">
+    <form className="h-full relative w-1/3 md:w-full md:my-4 md:h-[45px]">
       <input
         onChange={SearchEventFunction}
-        className="h-full w-full outline-none px-3 bg-transparent border-solid border-[2px] rounded-[6px]"
+        className="w-full h-full outline-none text-[18px] text-white px-3 bg-transparent border-solid border-[2px] rounded-[16px]"
         type="text"
         placeholder="Qidiruv ... "
       />
-      <button className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer">
-        <FaSearch />
+      <button className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
+        <FaSearch className="text-white" />
       </button>
 
       {search?.length > 0 &&
         (findText.length > 0 ? (
-          <div className="relative top-4">
-            <div className="absolute overflow-hidden w-full bg-[#fff] z-10 p-3 rounded-[15px]">
-              <div className="overflow-auto max-h-[250px] flex flex-col gap-3">
+          <div className="relative top-3">
+            <div className="absolute overflow-hidden w-full bg-[#fff] z-10 p-3 rounded-[20px]">
+              <div className="overflow-auto max-h-[250px] flex flex-col gap-2">
                 {findText?.map((value, index) => (
                   <Slide
                     key={index}
@@ -60,7 +60,7 @@ function GlobalSearch() {
             </div>
           </div>
         ) : (
-          <p className="text-red-800">Hech narsa topilmadi</p>
+          <p className="text-yellow-500">Hech narsa topilmadi 😔</p>
         ))}
     </form>
   );

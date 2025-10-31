@@ -28,20 +28,20 @@ function DateSwitcher() {
   const monthIndex = moment().iMonth(); // Hijriy oy indeksi olish
   const hijriMonth = hijriMonths[monthIndex]; // O'zgaruvchiga Lotin oy nomini olish
   return (
-    <div className="flex bg-white h-full items-center gap-3 text-[20px] px-3 rounded-[6px] md:bg-transparent md:text-white md:w-full md:px-0">
-      <div className="xl:text-[18px] lg:text-[16px]">
+    <div className="flex bg-white h-full items-center gap-3 text-[19px] px-5 rounded-[16px] md:bg-transparent md:text-white md:w-full md:px-0 md:mt-3">
+      <div className="xl:text-[17px] lg:text-[15px] md:text-[17px]">
         <span>{moment().format("YYYY")}</span>
         <span>- yil</span>
       </div>
-      <div className="xl:text-[18px] lg:text-[16px]">
+      <div className="xl:text-[17px] lg:text-[15px] md:text-[17px]">
         <span>{moment().format("D-MMMM", { locale: "uz" })}</span>
       </div>
       /{/* Hijriy data */}
-      <div className="xl:text-[18px] lg:text-[16px]">
+      <div className="xl:text-[17px] lg:text-[15px] md:text-[17px]">
         <span>{moment().format("iYYYY")}</span>
         <span>- yil</span>
       </div>
-      <div className="xl:text-[18px] lg:text-[16px]">
+      <div className="xl:text-[17px] lg:text-[15px] md:text-[17px]">
         <span>
           {moment().format("iDD").startsWith("0")
             ? moment().format("iDD").slice(1)

@@ -18,7 +18,7 @@ function Time() {
   };
 
   return (
-    <div className="text-white text-[20px] xl:text-[18px] lg:text-[16px] md:w-full">
+    <div className="text-white text-[19px] xl:text-[17px] lg:text-[15px] md:text-[17px] md:w-full">
       {formatTime(time)} PM
     </div>
   );
