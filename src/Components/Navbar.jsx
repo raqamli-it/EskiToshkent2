@@ -100,7 +100,7 @@ function Navbar() {
           <div className="flex gap-[20px] text-white text-[20px] relative tracking-[2px] xl:text-[18px] lg:text-[15px] lg:gap-4">
             <NavLink
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -111,7 +111,7 @@ function Navbar() {
 
             <NavLink
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -122,7 +122,7 @@ function Navbar() {
 
             <NavLink
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -134,7 +134,7 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -145,7 +145,7 @@ function Navbar() {
 
             <NavLink
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -156,7 +156,7 @@ function Navbar() {
 
             <NavLink
               className={({ isActive }) =>
-                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[2px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
+                `hover:text-green-500 transition-all duration-300 relative before:content-[''] before:absolute before:-bottom-[3px] before:left-0 before:w-full before:h-[2px] before:bg-green-500 before:origin-right before:scale-x-0 hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-300 md:before:h-0 md:text-[16px] ${
                   isActive ? "text-green-500 before:scale-x-100" : ""
                 }`
               }
@@ -199,7 +199,7 @@ function Navbar() {
 
         <div
           className={`${
-            toggle ? "right-0" : "-right-[100%]"
+            toggle ? "right-0" : "-right-[100%] delay-300"
           } absolute w-full top-[90px] px-[10px] bg-[#192957] duration-500 ease-in-out`}
         >
           <div>
@@ -212,11 +212,15 @@ function Navbar() {
             {/* <WeatherApp /> */}
           </div>
 
-          <div className="flex flex-col py-5">
+          <div className="flex flex-col pb-5 pt-3">
             <NavLink
               onClick={openButton}
               to="/news"
-              className={`h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500`}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Yangiliklar
             </NavLink>
@@ -224,7 +228,11 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/monuments"
-              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Yodgorliklar
             </NavLink>
@@ -232,7 +240,11 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/artifacts"
-              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Ashyolar
             </NavLink>
@@ -240,7 +252,11 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/museums"
-              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Muzeylar
             </NavLink>
@@ -248,7 +264,11 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/library"
-              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Kutubxona
             </NavLink>
@@ -256,7 +276,11 @@ function Navbar() {
             <NavLink
               onClick={openButton}
               to="/about"
-              className="h-[48px] text-white flex items-center text-[18px] hover:text-yellow-500"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-yellow-500" : "text-white"
+                } h-[48px] flex items-center text-[18px] hover:text-yellow-500`
+              }
             >
               Biz haqimizda
             </NavLink>
