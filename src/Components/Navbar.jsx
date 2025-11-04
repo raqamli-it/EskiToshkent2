@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import Time from "../Headers/Time";
 import DateSwitcher from "../Headers/DateSwitcher";
 import GlobalSearch from "../Headers/GlobalSearch";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import "./navbar.css";
 
 // import WeatherApp from "../Headers/WeatherApp";
@@ -37,6 +37,10 @@ function Navbar() {
     setClose(false);
   };
 
+  const toggleGlobalSearch = useCallback(() => {
+    setToggle((prev) => !prev);
+  }, []);
+
   return (
     <div
       className={`w-full fixed top-0 left-0 z-10 md:xl-5 ${
@@ -61,7 +65,7 @@ function Navbar() {
       <div
         className={`max-w-[1400px] mx-auto w-full md:hidden h-[45px] flex items-center justify-end gap-5 mt-4 xl:gap-3 xl:px-5`}
       >
-        <GlobalSearch />
+        <GlobalSearch toggleGlobalSearch={toggleGlobalSearch} />
 
         <Time />
 
@@ -199,7 +203,7 @@ function Navbar() {
           } absolute w-full top-[90px] px-[10px] bg-[#192957] duration-500 ease-in-out`}
         >
           <div>
-            <GlobalSearch />
+            <GlobalSearch toggleGlobalSearch={toggleGlobalSearch} />
 
             <Time />
 

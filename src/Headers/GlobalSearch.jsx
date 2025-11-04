@@ -1,11 +1,11 @@
 import { Slide } from "react-awesome-reveal";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function GlobalSearch() {
-  const [search, setSearch] = useState(null);
-  const [searchText, setSearchText] = useState();
+function GlobalSearch({ toggleGlobalSearch }) {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const data = [
     { id: 1, name: "Yangiliklar", link: "/news" },
@@ -17,6 +17,7 @@ function GlobalSearch() {
   ];
 
   const SearchEventFunction = (e) => {
+    e.preventDefault();
     setSearch(e.target.value);
   };
 
@@ -24,12 +25,19 @@ function GlobalSearch() {
     val?.name?.toLowerCase().includes(search?.toLowerCase())
   );
 
+  const linkBtn = (id) => {
+    navigate(id);
+    toggleGlobalSearch((p) => !p);
+    setSearch("");
+  };
+
   return (
-    <form className="h-full relative w-1/3 md:w-full md:my-4 md:h-[45px]">
+    <div className="h-full relative w-1/3 md:w-full md:mt-4 md:mb-6 md:h-[45px]">
       <input
         onChange={SearchEventFunction}
         className="w-full h-full outline-none text-[18px] text-white px-3 bg-transparent border-solid border-[2px] rounded-[16px]"
         type="text"
+        value={search}
         placeholder="Qidiruv ... "
       />
       <button className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
@@ -40,7 +48,7 @@ function GlobalSearch() {
         (findText.length > 0 ? (
           <div className="relative top-3">
             <div className="absolute overflow-hidden w-full bg-[#fff] z-10 p-3 rounded-[20px]">
-              <div className="overflow-auto max-h-[250px] flex flex-col gap-2">
+              <div className="overflow-auto max-h-[250px] flex flex-col gap-2 md:pr-2">
                 {findText?.map((value, index) => (
                   <Slide
                     key={index}
@@ -48,12 +56,12 @@ function GlobalSearch() {
                     triggerOnce
                     className="w-full px-5 p-2 duration-300 ease-out rounded-[12px] cursor-pointer group hover:bg-gray-700"
                   >
-                    <Link
-                      to={value.link}
-                      className="w-full text-[#000] duration-300 ease-out group-hover:text-white"
+                    <button
+                      onClick={() => linkBtn(value?.link)}
+                      className="w-full text-[#000] duration-300 ease-out group-hover:text-white text-left"
                     >
                       {value?.name}
-                    </Link>
+                    </button>
                   </Slide>
                 ))}
               </div>
@@ -62,7 +70,7 @@ function GlobalSearch() {
         ) : (
           <p className="text-yellow-500">Hech narsa topilmadi 😔</p>
         ))}
-    </form>
+    </div>
   );
 }
 
