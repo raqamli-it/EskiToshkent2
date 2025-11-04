@@ -28,7 +28,7 @@ function DateSwitcher() {
   const monthIndex = moment().iMonth(); // Hijriy oy indeksi olish
   const hijriMonth = hijriMonths[monthIndex]; // O'zgaruvchiga Lotin oy nomini olish
   return (
-    <div className="flex bg-white h-full items-center gap-3 text-[19px] px-5 rounded-[16px] md:bg-transparent md:text-white md:w-full md:px-0 md:mt-3 md:flex-wrap">
+    <div className="flex bg-white h-full items-center gap-3 text-[19px] px-5 rounded-[12px] md:bg-transparent md:text-white md:w-full md:px-0 md:mt-3 md:flex-wrap">
       <div className="xl:text-[17px] lg:text-[15px] md:text-[17px]">
         <span>{moment().format("YYYY")}</span>
         <span>- yil</span>

@@ -1,5 +1,6 @@
 import { Slide } from "react-awesome-reveal";
 import { FaSearch } from "react-icons/fa";
+import { FcSearch } from "react-icons/fc";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,13 +36,13 @@ function GlobalSearch({ toggleGlobalSearch }) {
     <div className="h-full relative w-1/3 md:w-full md:mt-4 md:mb-6 md:h-[45px]">
       <input
         onChange={SearchEventFunction}
-        className="w-full h-full outline-none text-[18px] text-white px-3 bg-transparent border-solid border-[2px] rounded-[16px]"
+        className="w-full h-full outline-none text-[18px] text-white px-3 bg-transparent border-solid border-[2px] rounded-[12px]"
         type="text"
         value={search}
         placeholder="Qidiruv ... "
       />
       <button className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
-        <FaSearch className="text-white" />
+        <FcSearch className="text-white text-[24px]" />
       </button>
 
       {search?.length > 0 &&

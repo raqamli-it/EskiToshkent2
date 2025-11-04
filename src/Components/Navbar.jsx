@@ -65,11 +65,11 @@ function Navbar() {
       <div
         className={`max-w-[1400px] mx-auto w-full md:hidden h-[45px] flex items-center justify-end gap-5 mt-4 xl:gap-3 xl:px-5`}
       >
-        <GlobalSearch toggleGlobalSearch={toggleGlobalSearch} />
-
         <Time />
 
         <DateSwitcher />
+
+        <GlobalSearch toggleGlobalSearch={toggleGlobalSearch} />
 
         {/* <WeatherApp /> */}
       </div>
